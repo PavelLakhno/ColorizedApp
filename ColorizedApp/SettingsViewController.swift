@@ -88,7 +88,7 @@ extension SettingsViewController: UITextFieldDelegate {
             guard let newValue = Float(textFieldValue) else { return }
             updateSlider(tag: textField.tag, value: newValue)
         } else {
-            showAlert(tag: textField.tag)
+            showAlert()
         }
     }
 }
@@ -96,7 +96,7 @@ extension SettingsViewController: UITextFieldDelegate {
 // MARK: - Alert Controller
 extension SettingsViewController {
     
-    private func showAlert(tag: Int) {
+    private func showAlert() {
         let alertMessage = UIAlertController(
             title: "Error",
             message: "Please, enter correct value",
